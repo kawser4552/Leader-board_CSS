@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+
+<!--    font-awesome   -->
+
+
+<script src="https://kit.fontawesome.com/66920e83ed.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+
+        body{
+            
+            font-family: 'Poppins', sans-serif;
+            background-color: #F3F1FF;
+        }
+        .top-players{
+            margin-bottom: 30px;
+        }
+        .container{
+            background-color: white;
+            width: 870px;
+            padding: 33px;
+            margin-bottom: 21px;
+            border-radius: 25px;
+            
+        }
+        .players{
+            display: grid ;
+            /* grid-template-columns:1fr 1fr 1fr; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 30px;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .player img{
+            width: 56px;
+            height: 56px;
+            margin-right: 10px;
+            
+            
+        }
+        .player{
+            display: flex;
+           
+            align-items: center;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            padding: 30px;
+            border-radius: 20px;
+            margin-right: 20px;
+            background-color:#562EFF ;
+            color: white;
+        }
+        .player:hover{
+            background-color:#ee169b;
+            color: #FFC014;
+        }
+        .section-title{
+            color: #562EFF;
+            font-size: 24px;
+            margin-top: 3px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        }
+
+        hr{
+            border: 1px solid #D1D1D1;
+            margin-bottom: 30px;
+        }
+        /* Top Blogs Style */
+
+        .blog{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 26px;
+        }
+
+      .blogs  .thumbnail img{
+            width: 177px;
+            height: 117px;
+            margin-right: 16px;
+        }
+        article{
+            display: flex;
+        }
+        .blog-title{
+            font-size: 20px;
+        }
+        .blog-author{
+            color:#9F9F9F ;
+            font-size: 16px;
+        }
+        .blog-author a{
+            text-decoration: none;
+        }
+/* 
+        coureses style */
+
+
+        .course-banner img{
+
+            width: 224px;
+            height: 104px;
+
+        }
+
+        .fa-star{
+            color: #FFC014;
+            width:12.39px;
+            height:11.81px;
+        }
+
+        .fa-star:hover{
+            color: red;
+            
+        }
+        .empty{
+            color: #AEAEAE;;
+            width:12.39px;
+            height:11.81px;
+        }
+
+        .course-info{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* navbar */
+        
+        .navbar{
+            height: 15px;
+            background-color:  #562EFF;
+            
+            padding: 60px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows:50px;
+            grid-template-areas:
+            "f m m k k k k k k k h h";
+            
+
+        }
+        .items img{
+            height: 51px;
+            width: 51px;
+        }
+
+        .items img:hover{
+            height: 81px;
+            width: 81px;
+        }
+
+        .idea{
+            font-size: 30px;
+            color: white;
+            grid-area: m ;
+        }
+
+        .idea:hover{
+            font-size: 50px;
+            color: yellow;
+        }
+        .items{
+            grid-area: h;
+            color: #D1D1D1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+    
+        }
+        small{
+            margin: 10px;
+        }
+        small:hover{
+            color: red;
+        }
+
+        .courses{
+            display: grid;
+            grid-template-columns:repeat(3, 1fr) ;
+            padding:5px;
+        }
+        .course{
+            padding: 20px;
+            height: auto;
+            background-color: rgb(221, 12, 75);
+            margin:10px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 4px gray;
+        }
+        .course:hover{
+            background-color: #FFC014;
+        }
+        
+       
+        
+        
+        
+        
+
+
+    </style>
+</head>
+<body>
+    <!-- header start -->
+
+    <header class="navbar">
+
+        <div class="idea">
+            <i class="fa-solid fa-head-side-cough-slash"></i>
+        </div>
+        <div class="items">
+            <div>
+                <small>Home</small>
+                <small>About</small>
+                <small>works</small>
+            </div>
+
+
+            <div>
+                <img src="./players/player-6.png" alt="">
+            </div>
+            
+        </div>
+
+
+
+    </header>
+    <!-- header end  -->
+
+    <main>
+
+        <!-- top players and top vlogs -->
+
+
+        <section class=" container">
+            <div class="top-players">
+                <h2 class="section-title">Top Players</h2>
+                <div class="players">
+                    <!-- .player*6>img[src="players/player-$.png"]+h3{Top Player-$} -->
+                    <div class="player">
+                        <img src="players/player-1.png" alt=" ">
+                        <h3>Top Player-1</h3>
+                    </div>
+                    <div class="player">
+                        <img src="players/player-2.png" alt="">
+                        <h3>Top Player-2</h3>
+                    </div>
+                    <div class="player">
+                        <img src="players/player-3.png" alt="">
+                        <h3>Top Player-3</h3>
+                    </div>
+                    <div class="player">
+                        <img src="players/player-4.png" alt="">
+                        <h3>Top Player-4</h3>
+                    </div>
+                    <div class="player">
+                        <img src="players/player-5.png" alt="">
+                        <h3>Top Player-5</h3>
+                    </div>
+                    <div class="player">
+                        <img src="players/player-6.png" alt="">
+                        <h3>Top Player-6</h3>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+        
+
+            <div class="top-blogs">
+                <h2 class="section-title">Top Blogs</h2>
+                <div class="blog">
+                    <article class="blogs">
+                        <div class="thumbnail">
+                            <img src="blogs/blog-1.png" alt="">
+    
+                        </div>
+                        <div class="blog-info">
+                            <h3 class="blog-title">Blog Title</h3>
+                            <p class="blog-author"><a href="">Blog Author</a></p>
+                        </div>
+                    </article>
+                    <article class="blogs">
+                        <div class="thumbnail">
+                            <img src="blogs/blog-2.png" alt="">
+    
+                        </div>
+                        <div class="blog-info">
+                            <h3 class="blog-title">Blog Title</h3>
+                            <p class="blog-author"><a href="">Blog Author</a></p>
+                        </div>
+                    </article>
+                    <article class="blogs">
+                        <div class="thumbnail">
+                            <img src="blogs/blog-3.png" alt="">
+    
+                        </div>
+                        <div class="blog-info">
+                            <h3 class="blog-title">Blog Title</h3>
+                            <p class="blog-author"><a href="">Blog Author</a></p>
+                        </div>
+                    </article>
+                    <article class="blogs">
+                        <div class="thumbnail">
+                            <img src="blogs/blog-4.png" alt="">
+    
+                        </div>
+                        <div class="blog-info">
+                            <h3 class="blog-title">Blog Title</h3>
+                            <p class="blog-author"><a href="">Blog Author</a></p>
+                        </div>
+                    </article>
+
+                </div>
+
+
+
+                 
+            </div>
+
+        </section>
+
+
+
+        <!-- latest Courses -->
+
+        <section class=" container">
+            <h2 class="section-title">Latest Courses</h2>
+
+            <div class="courses">
+                <div class="course">
+                    <div class="course-banner">
+                        <img src="/courses/course-1.png" alt="">
+                    </div>
+                    <div class="course-detail">
+                        <h3 class="course-title">
+
+                            course-title-The complete React 2022
+                        
+                        </h3>
+                        <p class="course-author">course-author</p>
+                        <div class="course-info">
+                            <div>    <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star empty"></i>
+                                <i class="fa-solid fa-star  empty"></i>
+                                <span>4.5</span>
+                            
+                            </div>
+                        
+                            
+                        <div class="course-duration">
+
+                            <i class="fa-solid fa-clock"></i>
+                            1:30 hr
+                            
+
+                        </div>
+                    </div>
+                        
+
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-banner">
+                        <img src="/courses/course-1.png" alt="">
+                    </div>
+                    <div class="course-detail">
+                        <h3 class="course-title">
+
+                            course-title-The complete React 2022
+                        
+                        </h3>
+                        <p class="course-author">course-author</p>
+                        <div class="course-info">
+                            <div>    <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star empty"></i>
+                                <i class="fa-solid fa-star  empty"></i>
+                                <span>4.5</span>
+                            
+                            </div>
+                        
+                            
+                        <div class="course-duration">
+
+                            <i class="fa-solid fa-clock"></i>
+                            1:30 hr
+                            
+
+                        </div>
+                    </div>
+                        
+
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-banner">
+                        <img src="/courses/course-1.png" alt="">
+                    </div>
+                    <div class="course-detail">
+                        <h3 class="course-title">
+
+                            course-title-The complete React 2022
+                        
+                        </h3>
+                        <p class="course-author">course-author</p>
+                        <div class="course-info">
+                            <div>    <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star empty"></i>
+                                <i class="fa-solid fa-star  empty"></i>
+                                <span>4.5</span>
+                            
+                            </div>
+                        
+                            
+                        <div class="course-duration">
+
+                            <i class="fa-solid fa-clock"></i>
+                            1:30 hr
+                            
+
+                        </div>
+                    </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+</body>
+</html>
